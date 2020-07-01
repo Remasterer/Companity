@@ -8,11 +8,11 @@
           </figure>
         </a>
       </div>
-
-      <input type="text" class="header__search">
+      <div class="header__search-container">
+        <input type="text" class="header__search-form" placeholder="Find information">
+      </div>
       <input type="checkbox" id="burgerMenu">
       <label for="burgerMenu" class="burger-menu">
-
 
 
         <svg class="ham ham6 burger-menu__icon" viewBox="0 0 100 100"  onclick="this.classList.toggle('active')">
@@ -30,7 +30,7 @@
 
       </label>
 
-      <div class="menu-hiden-mobile">
+      <div class="menu-hiden-mobile transition">
         <nav class="header-menu">
           <a href="#" class="header-menu-link active">Who we are?</a>
           <a href="#" class="header-menu-link">What we do?</a>

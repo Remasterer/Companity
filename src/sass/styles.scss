@@ -71,3 +71,12 @@ a{
     font-size: 22px;
   }
 }
+.h-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.marked-text{
+  font-weight: bold;
+  color: $comb-orange;
+}

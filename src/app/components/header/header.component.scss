@@ -8,16 +8,13 @@
       animation: handshaking .7s linear 2;
     }
   }
-  &__container{
+  &__inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:  25px ;
-    max-width: 1100px;
-    margin: 0 auto;
     position: relative;
+    padding: 25px 0;
   }
-
   &-menu{
     margin-right: 130px;
     @include mq('q420'){

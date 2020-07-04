@@ -1,3 +1,4 @@
+@import "./src/sass/core/module";
 .about-us{
   margin-top: 50px;
   &__preview{
@@ -6,11 +7,53 @@
     &-sub-title{
       font-family: "RalewayLight";
       margin-bottom: 30px;
+      color: $bg-blue;
+      @include mq('tablet-wide'){
+        font-size: 22px;
+      }
+
     }
     &-title{
       font-family: "RalewayRegular";
       font-size: 35px;
+      @include mq('tablet-wide'){
+        font-size: 25px;
+      }
+
+    }
+    &__video-wrapper{
+      height: 750px;
+      background: red;
+      width: 100%;
+      @include mq('phablet'){
+        height: 130vw;
+      }
+      @include mq('phone-wide'){
+        height: 150vw;
+      }
+    }
+    &__video{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
     }
   }
 
+}
+.text-typing
+{
+  width: 100%;
+  font-size: 22px;
+  white-space:nowrap;
+  overflow:hidden;
+  -webkit-animation: type 5s steps(50, end);
+  animation: type 5s steps(50, end);
+}
+@keyframes type{
+  from { width: 0; }
+}
+
+@-webkit-keyframes type{
+  from { width: 0; }
 }

@@ -1,7 +1,8 @@
 @import "./src/sass/core/module";
+
 .about-us{
   margin-top: 50px;
-  &__preview{
+  .preview{
     &__text{
     }
     &-sub-title{
@@ -11,7 +12,6 @@
       @include mq('tablet-wide'){
         font-size: 22px;
       }
-
     }
     &-title{
       font-family: "RalewayRegular";
@@ -23,7 +23,6 @@
     }
     &__video-wrapper{
       height: 750px;
-      background: red;
       width: 100%;
       @include mq('phablet'){
         height: 130vw;
@@ -32,6 +31,9 @@
         height: 150vw;
       }
     }
+    &__shape{
+        position: relative;
+    }
     &__video{
       object-fit: cover;
       height: 100%;
@@ -39,10 +41,279 @@
       pointer-events: none;
     }
   }
+  .possibilities{
+    font-family: "RalewayRegular";
+    &__inner{
+      display: flex;
+      @include mq("tablet"){
+        flex-direction: column;
+      }
 
+    }
+    &__info{
+      width: 40%;
+      transition: transfrom 1s;
+
+      @include mq('tablet-wide'){
+        width: 35%;
+        margin-right: 20px;
+      }
+      @include mq("tablet"){
+        order: 2;
+        width: 100%;
+        padding-bottom: 50px;
+      }
+      &-sub-title{
+        color: $txt-color-light;
+        margin-top: 80px;
+        font-size: 20px;
+        @include mq('tablet-wide'){
+          font-size: 18px;
+        }
+        @include mq("tablet"){
+          margin-top: 0px;
+        }
+      }
+      &-title{
+        margin-top: 80px;
+        width: 70%;
+        line-height: 1.2;
+        @include mq('tablet-wide'){
+          font-size: 20px;
+          width: unset;
+        }
+      }
+      &-button{
+        padding: 15px 25px;
+        margin-top: 40px;
+        background: $comb-orange;
+        color: $def-white;
+        font-size: 18px;
+        border: none;
+      }
+      &-box{
+        display: flex;
+        flex-flow: row wrap;
+      }
+      &__block{
+        background: #fff;
+        width: 45%;
+        margin-left: 20px;
+      }
+    }
+    &__items{
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      width: 60%;
+      @include mq('tablet-wide'){
+        width: 70%;
+      }
+      @include mq("tablet"){
+        width: 100%;
+        //justify-content: center;
+      }
+      @include mq("phablet"){
+        justify-content: center;
+      }
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 45%;
+      background: $def-white;
+      padding: 30px;
+      margin: -50px 0 100px 0;
+      z-index: 1;
+      -webkit-box-shadow: 10px 6px 31px -12px rgba(0,0,0,0.59);
+      -moz-box-shadow: 10px 6px 31px -12px rgba(0,0,0,0.59);
+      box-shadow: 10px 6px 31px -12px rgba(0,0,0,0.59);
+      opacity: 0;
+      @include mq('tablet-wide'){
+        width: 47%;
+        padding: 20px;
+      }
+      @include mq("tablet"){
+        width: 45%;
+      }
+      @include mq("phablet"){
+        width: 75%;
+        &:last-child{
+          margin-bottom: 50px;
+        }
+      }
+      @include  mq('phone'){
+        width: 85%;
+      }
+      &-image{
+        height: 180px;
+        max-width: 180px;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+      &-title{
+        font-size: 20px;
+        @include mq('desktop'){
+          font-size: 18px;
+        }
+        padding-bottom: 50px;
+      }
+      &-text{
+        color: $txt-color-light;
+        font-size: 15px;
+        padding-bottom: 30px;
+      }
+      &-button{
+        margin-top: auto;
+        padding: 10px 20px;
+        background: $comb-orange;
+        color: $def-white;
+        font-size: 18px;
+        border: none;
+        @include mq('tablet-wide'){
+          width: 47%;
+          padding: 10px 18px;
+          font-size: 16px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .partners{
+    padding-top: 50px;
+    background: $bg-blue;
+    color: $def-white;
+    &__inner{
+      display: flex;
+      padding: 100px ;
+      @include mq('q860'){
+        padding: 50px;
+      }
+      @include mq('tablet'){
+        padding: 20px;
+        flex-direction: column;
+      }
+    }
+    &__preview{
+      width: 35%;
+      @include mq('tablet'){
+        width: unset;
+        padding-bottom: 100px;
+      }
+    }
+    &-text{
+      font-family: "RalewayLight";
+      position: relative;
+      font-size: 18px;
+      &::after{
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url("/assets/img/shapes/figure.png") center center no-repeat;
+        background-size: contain;
+      }
+    }
+    &__info{
+      width: 65%;
+      padding-left: 100px;
+      &-box{
+          display: grid;
+          grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+          grid-gap: 60px;
+          padding-top: 80px;
+          @include mq('q440'){
+
+          }
+        }
+      &-company-logo{
+        justify-self: center;
+        border: none;
+        fill: $comb-orange;
+        width: 70px;
+      }
+      @include mq('tablet'){
+        width: unset;
+        padding-left: 0;
+      }
+    }
+  }
+  .workflow{
+    padding-top: 150px;
+    color: $def-white;
+    font-family: "MuseoBold";
+    &__slider{
+      height: 750px;
+      &__item{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 50px;
+        &--first{
+          background: url("/assets/img/workflow/slide-1.jpg") center center no-repeat;
+          background-size: cover;
+        }
+        &--second{
+          background: url("/assets/img/workflow/slide-2.jpg") center center no-repeat;
+          background-size: cover;
+          color: $txt-color;
+        }
+        &--third{
+          background: url("/assets/img/workflow/slide-3.jpg") center center no-repeat;
+          background-size: cover;
+          color: $txt-color;
+        }
+        &-title{
+          font-size: 50px;
+          letter-spacing: 2px;
+          width: 50%;
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
 }
-.text-typing
-{
+
+//Figure
+.custom-shape-divider-top-1593875094 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.custom-shape-divider-top-1593875094 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+.custom-shape-divider-top-1593875094 .shape-fill {
+  fill: $bg-gray;
+}
+
+//Animations
+.rotateFigure{
+  &::after{
+    animation: rotateAndShow 1s  ease-in-out 1;
+  }
+}
+ .showPossibilitysItems{
+   opacity: 1 !important;
+   animation: showBlocks 1s linear 1 ;
+ }
+ .showSlideLeft{
+    animation: slideFromLeft 1s 1;
+ }
+.showSlideRight{
+  animation: slideFromRight 1s 1;
+}
+.text-typing {
   width: 100%;
   font-size: 22px;
   white-space:nowrap;
@@ -53,7 +324,41 @@
 @keyframes type{
   from { width: 0; }
 }
-
 @-webkit-keyframes type{
   from { width: 0; }
+}
+@keyframes showBlocks {
+  from{
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideFromLeft {
+  from{
+    transform: translateX(-370px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes slideFromRight {
+  from{
+    transform: translateX(370px);
+  }
+  to{
+    transform: translateX(0px);
+  }
+}
+@keyframes rotateAndShow {
+  from{
+    transform: rotate(360deg);
+
+  }
+  to{
+    transform: rotate(0deg);
+  }
 }

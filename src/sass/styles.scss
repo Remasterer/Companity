@@ -50,6 +50,12 @@ a{
   text-decoration: none;
   color: inherit;
 }
+button{
+  cursor: pointer;
+}
+.main{
+  padding-top: 100px;
+}
 .container{
   max-width: 1250px;
   margin: 0 auto;
@@ -73,6 +79,12 @@ a{
 }
 .h-container{
   max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.m-container{
+  max-width: 1760px;
+  max-width: 1420px;
   margin: 0 auto;
   padding: 0 20px;
 }

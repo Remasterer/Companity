@@ -1,21 +1,13 @@
-@mixin mq($width) {
-  @media only screen and (max-width: $width * 1px) {
-    @content;
-  }
-}
 
-@mixin mqm( $width) {
-  @media only screen and (min-width: $width * 1px) {
-    @content;
-  }
-}
 $breakpoints: (
   "phone":        400px,
   "q420":         420px,
+  "q440":         440px,
   "phone-wide":   480px,
   "phablet":      560px,
   "tablet-small": 640px,
   "tablet":       768px,
+  "q860":         860px,
   "tablet-wide":  1024px,
   "desktop":      1248px,
   "desktop-wide": 1440px

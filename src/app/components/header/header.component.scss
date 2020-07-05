@@ -1,6 +1,11 @@
 @import "../../../sass/core/module";
 
 .header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background: $txt-color;
   color: $def-white;
   .logo{
@@ -8,13 +13,20 @@
       animation: handshaking .7s linear 2;
     }
   }
+  .h-container{
+    @include mq('tablet-wide'){
+      padding: 0;
+    }
+  }
   &__inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     padding: 25px 0;
+    z-index: 1000;
+    background:  $txt-color;
   }
+
   &-menu{
     margin-right: 130px;
     @include mq('q420'){
@@ -56,7 +68,7 @@
         }
       }
     }
-    @include mq('tablet-wide','max'){
+    @include mq('tablet-wide'){
       margin-right: 0;
     }
   }
@@ -70,7 +82,6 @@
         padding: 10px 25px;
         transition: all .5s;
         border: 2px solid;
-
         &:before{
           content: '';
           width: 100%;
@@ -117,7 +128,7 @@
       &-btn + &-btn{
          margin-left: 36px;
        }
-    @include mq('tablet-wide','max'){
+    @include mq('tablet-wide'){
       padding-top: 50px;
     }
   }
@@ -160,8 +171,7 @@
   align-items: center;
   overflow: hidden;
   @include mq('tablet-wide'){
-    z-index: -1;
-    transform: translateY(-240px);
+    transform: translateY(-250px);
     padding: 20px 0 ;
     position: absolute;
     top: 100%;
@@ -171,7 +181,9 @@
     flex-direction: column;
     align-items: center;
     background: $txt-color-light;
+    backdrop-filter: blur(5px);
     transition: transform .5s;
+    z-index: -1;
   }
 }
 .burger-menu{
